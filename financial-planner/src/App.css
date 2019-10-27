@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  height: 100%;
+  width: 100%;
 }
 
 nav{
@@ -18,3 +20,39 @@ nav{
   align-items: center;
   list-style: none;
 }
+
+.HomeButtons{
+  height: 15%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.HomeButton{
+  font-size: 13px;
+  text-transform: uppercase;
+  width: 40vh;
+  margin: 0 0 0 0;
+  padding: 20px;
+  background: linear-gradient( #7297ff , #aba9ff);
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.HomeButton:hover {
+  background: #827ffe;
+}
+
+.HomeButton:active {
+  background: #514cfe;
+}
+
+

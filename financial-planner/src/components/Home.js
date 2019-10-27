@@ -4,8 +4,9 @@ import '../App.css';
 function Home(){
 
     return(
-        <div>
-            <h1>Home Page</h1>
+        <div className="HomeButtons">
+            <button className="HomeButton">Select Lifestyle</button>
+            <button className="HomeButton">Select Career</button>
         </div>
     )};
 
