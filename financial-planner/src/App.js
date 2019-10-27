@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
-import Nav from './Nav';
-import About from './About';
-import Shop from './Shop';
-import ItemDetail from './ItemDetail'
+import Home from './components/Home';
+import Nav from './components/Nav';
+import About from './components/About';
+import Shop from './components/Shop';
+import ItemDetail from './components/ItemDetail'
 
 //importing Browserrouter from React-Router-dom
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -26,11 +27,5 @@ function App() {
 
   );
 }
-
-const Home = () => (
-  <div>
-    <h1>Home Page</h1>
-  </div>
-);
 
 export default App;
