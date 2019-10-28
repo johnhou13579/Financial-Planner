@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react'
 import '../App.css'
 import {ExpenseContext} from '../components/ExpenseContext'
 
-function House(props){
+const House=(props)=>{
     const [mortgage, setMortgage] = useState(''); 
     const [rent, setRent] = useState('');
     const [expenses, setExpenses] = useContext(ExpenseContext);
@@ -41,7 +41,7 @@ function House(props){
                             <span className="content-name">Rent</span>
                         </label>
                     </div>   
-                    <button>Submit</button> 
+                    <button className="Submitbutton" id="onceButton" onClick={trigger}>Submit</button> 
                 </form>
 
             
@@ -49,5 +49,8 @@ function House(props){
     )
 };
 
+const trigger = (button)=>{
+    document.getElementById("onceButton").style.visibility="hidden";
+}
 
 export default House;

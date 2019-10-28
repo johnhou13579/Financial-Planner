@@ -167,3 +167,19 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
+
+.Submitbutton{
+  background: #827ffe;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  color: white;
+  width: 70%;
+  cursor: pointer;
+  margin: 20px 0 0 0;
+}
+
+.Submitbutton:active {
+  background: #514cfe;
+}
+
