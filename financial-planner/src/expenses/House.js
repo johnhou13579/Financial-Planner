@@ -1,6 +1,5 @@
-import React, {useState, useContext} from 'react'
+import React from 'react'
 import '../App.css'
-import {ExpenseContext} from '../components/ExpenseContext'
 
 const House=(props)=>{
 

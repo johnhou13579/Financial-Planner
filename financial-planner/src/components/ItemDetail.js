@@ -5,7 +5,7 @@ function Item({match}) {
 
     useEffect(()=>{
         fetchItem();
-    },[]);
+    }, []);
 
     const [item, setItem] = useState({
       images: {}

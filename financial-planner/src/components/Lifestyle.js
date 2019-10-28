@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useState} from 'react';
 import '../App.css';
 import House from '../expenses/House';
 import Car from '../expenses/Car';
@@ -8,7 +8,6 @@ import Insurance from '../expenses/Insurance';
 import Entertainment from '../expenses/Entertainment';
 import Services from '../expenses/Services';
 import Savings from '../expenses/Savings'
-import {ExpenseContext} from '../components/ExpenseContext'
 
 
 const Lifestyle=()=>{
