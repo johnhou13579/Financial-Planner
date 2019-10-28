@@ -10,19 +10,19 @@ function Services(props){
             </div>
             <div>
                 <div className="form">
-                    <input type="text" name="name"/>
+                    <input type="number" name="name"/>
                     <label for="name" class="label-name">
                         <span class="content-name">Shopping</span>
                     </label>
                 </div>
                 <div className="form">
-                    <input type="text" name="name2"/>
+                    <input type="number" name="name2"/>
                     <label for="name2" class="label-name">
                         <span class="content-name">TV Subscriptions</span>
                     </label>
                 </div>
                 <div className="form">
-                    <input type="text" name="name2"/>
+                    <input type="number" name="name2"/>
                     <label for="name2" class="label-name">
                         <span class="content-name">Miscellaneous</span>
                     </label>

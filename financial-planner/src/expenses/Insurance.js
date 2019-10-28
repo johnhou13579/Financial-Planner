@@ -10,19 +10,19 @@ function Insurance(props){
             </div>
             <div>
                 <div className="form">
-                    <input type="text" name="name"/>
+                    <input type="number" name="name"/>
                     <label for="name" class="label-name">
                         <span class="content-name">Health/Dental Insurance</span>
                     </label>
                 </div>
                 <div className="form">
-                    <input type="text" name="name2"/>
+                    <input type="number" name="name2"/>
                     <label for="name2" class="label-name">
                         <span class="content-name">Doctor Visits</span>
                     </label>
                 </div>
                 <div className="form">
-                    <input type="text" name="name2"/>
+                    <input type="number" name="name2"/>
                     <label for="name2" class="label-name">
                         <span class="content-name">Perscriptions</span>
                     </label>

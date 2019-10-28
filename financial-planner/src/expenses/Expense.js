@@ -6,7 +6,7 @@ function Expense(props){
         <div className="Expense">
             <h1>{props.title}</h1>
             <div className="form">
-                <input type="text" name="name"/>
+                <input type="number" name="name"/>
                 <label for="name" class="label-name">
                     <span class="content-name">Cost</span>
                 </label>
