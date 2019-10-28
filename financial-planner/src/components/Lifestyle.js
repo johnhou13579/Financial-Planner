@@ -13,39 +13,21 @@ import {ExpenseContext} from '../components/ExpenseContext'
 
 const Lifestyle=()=>{
 
-    const [expenses, setExpenses] = useContext(ExpenseContext);
-    const [expense, setExpense] = useState({
-        Mortgage: 0,
-        Rent: 0,
-        Payment: 0,
-        Gas:0,
-        Insurance: 0,
-        Grocery: 0,
-        EatingOut: 0,
-        StudentLoans:0,
-        CreditLoans: 0,
-        Health: 0,
-        Doctor:0,
-        Prescriptions:0,
-        Utilities: 0,
-        Cable:0,
-        Phone:0,
-        Shopping:0,
-        TV:0,
-        Misc:0,
-        Social:0,
-        Investments: 0
-    });
+    const [expense, setExpense] = useState({});
+    
+    const handleHouseValue = (e) => {setExpense({...expense, Mortgage: e.target.value})};
+    const handleRentValue = (e) => {setExpense({...expense, Rent: e.target.value})};
 
-    const handleFormSubmit = () => {
 
-    };
+
+    const addExpense=()=>{
+
+    }
      
-
     return(
-        <form onSubmit={handleFormSubmit}>
+        
             <div className="body">
-                <House title="House"/>
+                <House title="House" Mortgage={expense.Mortgage} Rent={expense.Rent} onChangeValue={handleHouseValue} onChangeValue2={handleRentValue} />
                 <Car title="Car"/>
                 <Food title="Food"/>
                 <Loans title="Loans"/>
@@ -54,12 +36,10 @@ const Lifestyle=()=>{
                 <Entertainment title="Entertainment"/>
                 <Savings title="Savings"/>
                 <div>
-                    {expenses.map(e=>(
-                        <li>{e.expense}</li>
-                    ))}
+                    <button onClick={addExpense}>Submit</button>
                 </div>
             </div>
-        </form>            
+            
     )};
 
 export default Lifestyle;

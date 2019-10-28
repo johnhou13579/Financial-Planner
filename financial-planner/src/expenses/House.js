@@ -3,23 +3,6 @@ import '../App.css'
 import {ExpenseContext} from '../components/ExpenseContext'
 
 const House=(props)=>{
-    const [mortgage, setMortgage] = useState(''); 
-    const [rent, setRent] = useState('');
-    const [expenses, setExpenses] = useContext(ExpenseContext);
-
-    const updateMortgage=e=>{
-        setMortgage(e.target.value);
-    }
-
-    const updateRent=e=>{
-        setRent(e.target.value);
-    }
-
-    const addExpense = e =>{
-        e.preventDefault();
-        console.log("success");
-        setExpenses(p => [...p, {expense: mortgage}, {expense: rent}])
-    }
 
     return(
         <div className="Expense">
@@ -28,29 +11,20 @@ const House=(props)=>{
                 <p><i>(per month}</i></p>
             </div>
 
-                <form onSubmit={addExpense}>
                     <div className="form" >
-                        <input type="number" name="name" value={mortgage} onChange={updateMortgage}/>
+                        <input type="number" name="Mortgage" value={props.Mortgage} onChange={props.onChangeValue}/>
                         <label className="label-name">
                             <span className="content-name">Mortgage</span>
                         </label>
                     </div>
                     <div className="form">
-                        <input type="number" name="name2" value={rent} onChange={updateRent}/>
+                        <input type="number" name="Rent" value={props.Rent} onChange={props.onChangeValue2}/>
                         <label className="label-name">
                             <span className="content-name">Rent</span>
                         </label>
-                    </div>   
-                    <button className="Submitbutton" id="onceButton" onClick={trigger}>Submit</button> 
-                </form>
-
-            
+                    </div>               
         </div>
     )
 };
-
-const trigger = (button)=>{
-    document.getElementById("onceButton").style.visibility="hidden";
-}
 
 export default House;
