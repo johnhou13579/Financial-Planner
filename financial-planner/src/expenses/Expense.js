@@ -7,8 +7,8 @@ function Expense(props){
             <h1>{props.title}</h1>
             <div className="form">
                 <input type="number" name="name"/>
-                <label for="name" class="label-name">
-                    <span class="content-name">Cost</span>
+                <label for="name" className="label-name">
+                    <span className="content-name">Cost</span>
                 </label>
             </div>
             
