@@ -4,6 +4,10 @@
   width: 100%;
 }
 
+h1, p{
+  margin:0;
+}
+
 .body{
   margin: 20px 0 0 0;
   height: 80%;
@@ -16,7 +20,12 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  overflow: hidden;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 0px;  
+  background: transparent;  
 }
 
 nav{
@@ -71,11 +80,16 @@ nav{
 }
 
 .Expense{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   border: 2px solid #827ffe;
   border-radius: 20px;
   width: 250px;
   min-height: 300px;
   max-height: 360px;
+  box-shadow: 2px 3px 5px #888888;
 }
 
 .Expense input{
@@ -87,6 +101,7 @@ nav{
   position: relative;
   height: 50px;
   overflow:hidden;
+  padding-top: 15px;
 }
 
 .form input{
@@ -95,6 +110,7 @@ nav{
   padding-top: 20px;
   border: none;
   outline: none;
+  margin: 0 5px 0 5px;
 }
 
 .form label{
@@ -123,19 +139,17 @@ nav{
 
 .content-name{
   position:absolute;
-  bottom: 5px;
+  bottom: 25px;
   left: 0px;
   transition: all .3s ease;
 }
 
-.form input:focus + .label-name .content-name, 
-.form input:valid + .label-name .content-name{
-  transform: translateY(-150%);
-  font-size: 14px;
+.form input:focus + .label-name .content-name{
+  transform: translateY(-40%);
+  font-size: 16px;
   color: #827ffe;
 }
 
-.form input:focus + .label-name::after, 
-.form input:valid + .label-name::after{
+.form input:focus + .label-name::after{
   transform: translateX(0%);
 }

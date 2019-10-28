@@ -1,18 +1,25 @@
 import React from 'react';
 import '../App.css';
-import Expense from './Expense';
+import House from '../expenses/House';
+import Car from '../expenses/Car';
+import Food from '../expenses/Food';
+import Loans from '../expenses/Loans';
+import Insurance from '../expenses/Insurance';
+import Entertainment from '../expenses/Entertainment';
+import Services from '../expenses/Services';
+import Savings from '../expenses/Savings'
 
 function Lifestyle(){
     return(
         <div className="body">
-            <Expense title="House"/>
-            <Expense title="Car"/>
-            <Expense title="Food"/>
-            <Expense title="Utility"/>
-            <Expense title="Insurance"/>
-            <Expense title="Phone"/>
-            <Expense title="Entertainment"/>
-            <Expense title="Saving"/>
+            <House title="House"/>
+            <Car title="Car"/>
+            <Food title="Food"/>
+            <Loans title="Loans"/>
+            <Insurance title="Insurance"/>
+            <Services title="Services"/>
+            <Entertainment title="Entertainment"/>
+            <Savings title="Savings"/>
             
         </div>
     )};
