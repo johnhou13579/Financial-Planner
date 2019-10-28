@@ -4,6 +4,21 @@
   width: 100%;
 }
 
+.body{
+  margin: 20px 0 0 0;
+  height: 80%;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  overflow: hidden;
+}
+
 nav{
   display: flex;
   justify-content: space-around;
@@ -43,7 +58,7 @@ nav{
   border: none;
   outline: none;
   color: white;
-  border-radius: 10px;
+  border-radius: 40px;
   cursor: pointer;
 }
 
@@ -55,4 +70,72 @@ nav{
   background: #514cfe;
 }
 
+.Expense{
+  border: 2px solid #827ffe;
+  border-radius: 20px;
+  width: 250px;
+  min-height: 300px;
+  max-height: 360px;
+}
 
+.Expense input{
+  border: transparent;
+}
+
+.form{
+  width: 100%;
+  position: relative;
+  height: 50px;
+  overflow:hidden;
+}
+
+.form input{
+  width: 100%;
+  height: 80%;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+
+.form label{
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+  
+}
+
+.form label::after{
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -2px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #827ffe;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.content-name{
+  position:absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all .3s ease;
+}
+
+.form input:focus + .label-name .content-name, 
+.form input:valid + .label-name .content-name{
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #827ffe;
+}
+
+.form input:focus + .label-name::after, 
+.form input:valid + .label-name::after{
+  transform: translateX(0%);
+}
